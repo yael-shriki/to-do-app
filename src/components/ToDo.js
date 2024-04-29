@@ -8,8 +8,8 @@ const ToDo = ({ task, toggleComplete, deleteTask, editToDo }) => {
         <div className="ToDo">
             <p onClick={() => toggleComplete(task.id)} className={`${task.completed ? "completed" : "incompleted"}`}> {task.task}</p>
             <div>
-                <FontAwesomeIcon icon={faPenToSquare} onClick={() => editToDo(task.id)} />
-                <FontAwesomeIcon icon={faTrash} onClick={() => deleteTask(task.id)} />
+                <FontAwesomeIcon classname="edit-btn" icon={faPenToSquare} onClick={() => editToDo(task.id)} />
+                <FontAwesomeIcon classname="delete-btn" icon={faTrash} onClick={() => deleteTask(task.id)} />
             </div>
         </div>
 
